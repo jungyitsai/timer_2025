@@ -43,7 +43,7 @@
 <body>
     <canvas id="fireworks"></canvas>
     <div class="countdown">
-        <h1>距離 2025 還有</h1>
+        <h1 id="countdown_message">距離 2025 還有</h1>
         <p id="timer">載入中...</p>
     </div>
 
@@ -55,6 +55,7 @@
 
             if (timeLeft <= 0) {
                 document.getElementById('timer').textContent = '新年快樂！';
+                document.getElementById('countdown_message').innerHTML = '';  
                 return;
             }
 
